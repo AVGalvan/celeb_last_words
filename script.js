@@ -1,4 +1,4 @@
-let messageGenerator = {
+let mixedMessages = {
     //templates upon which the messages will be built
     //word types: [noun], [number], [verb], [adjective], [celeb]
     templates: [
