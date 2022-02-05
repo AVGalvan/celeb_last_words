@@ -7,3 +7,6 @@ Javascript
 ## Status - WIP
 Eventually I would like to add
 * A page depicting the back of a van in which a crystal ball presents the dying remarks instead of in the terminal
+
+## Inspiration
+This is a project for Codecademy's mixed messages portfolio project
