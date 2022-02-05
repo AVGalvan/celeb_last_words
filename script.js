@@ -156,3 +156,9 @@ let mixedMessages = {
 
 console.log(mixedMessages.generateMessage());
 console.log('');
+console.log(mixedMessages.generateMessage());
+console.log('');
+console.log(mixedMessages.generateMessage());
+console.log('');
+console.log(mixedMessages.generateMessage());
+console.log('');
