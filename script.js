@@ -1,6 +1,6 @@
 let messageGenerator = {
     //templates upon which the messages will be built
-    //word types: [noun], [number], [verb], [adjective] 
+    //word types: [noun], [number], [verb], [adjective], [celeb]
     templates: [
         `At [number], everyone has the [noun] he [verb]s.`,
         `I [verb] nothing but [noun].`,
@@ -115,6 +115,11 @@ let messageGenerator = {
             } else if (templateArr[i].includes('[adjective]') === true){
                 replacementWord = this.randomWordFromBank('a');
                 updatedElement = templateArr[i].replace('[adjective]', replacementWord);
+                message = message.concat(' ', updatedElement);
+                
+            } else if (templateArr[i].includes('[celeb]') === true){
+                replacementWord = this.randomWordFromBank('c');
+                updatedElement = templateArr[i].replace('[celeb]', replacementWord);
                 message = message.concat(' ', updatedElement);
                 
             } else {
