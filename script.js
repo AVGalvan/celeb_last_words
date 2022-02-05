@@ -4,7 +4,7 @@ let messageGenerator = {
     templates: [
         `At [number], everyone has the [noun] he [verb]s.`,
         `I [verb] nothing but [noun].`,
-        `[noun] has [verb]ed against me. The hour of my [noun] has come.`,
+        `[celeb] has [verb]ed against me. The hour of my [noun] has come.`,
         `Can you turn a [adjective] [noun] into [noun]?`,
         `Do not [verb] my [noun]s!`,
         `O my [adjective] [noun], whither art thou [verb]ing?`,
@@ -94,7 +94,8 @@ let messageGenerator = {
         for (let i = 0; i < templateArr.length; i++){
             //if statement checks if current templateArr element includes bracketed word type & concats
             if (templateArr[i].includes('[noun]') === false && templateArr[i].includes('[number]') === false &&
-            templateArr[i].includes('[verb]') === false  && templateArr[i].includes('[adjective]') === false  ){
+            templateArr[i].includes('[verb]') === false  && templateArr[i].includes('[adjective]') === false &&
+            templateArr[i].includes('[celeb]') === false){
                 message = message.concat(' ', templateArr[i]);
 
             } else if (templateArr[i].includes('[noun]') === true){
