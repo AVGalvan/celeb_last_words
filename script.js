@@ -1,5 +1,6 @@
 let messageGenerator = {
     //templates upon which the messages will be built
+    //word types: [noun], [number], [verb], [adjective] 
     templates: [
         `At [number], everyone has the [noun] he [verb]s.`,
         `I [verb] nothing but [noun].`,
@@ -15,11 +16,25 @@ let messageGenerator = {
     ],
     //word bank from which insertions will be chosen
     wordBank: {
-        nouns: ['weakness', 'gun', 'basket', 'depth', 'tennis', 'shit'],
-        numbers: [Math.floor(Math.random() * 301)],
-        verbs: ['bend', 'grab', 'compensate', 'paint', 'sack', 'fuck'],
-        adjectives: ['miscreant', 'young', 'burly', 'drunk', 'colossal', 'whorish'],
-        celebrities: ['Vin Diesel', 'Floyd Mayweather, Jr.', 'Michael Cera', 'Tina Fey', 'Flava Flav', 'Cesar Millan',],
+        nouns: ['weakness', 'gun', 'basket', 'depth', 'tennis', 'shit', 'piss', 'dick', 'discussion',
+        'driver', 'fortune', 'awareness', 'connection', 'wealth', 'stranger', 'definition', 'garbage', 'tea',
+        'lake', 'cunt', 'energy', 'power', 'welfare', 'mood', 'vibe', 'bird', 'income', 'society', 'joker',
+        'Among Us', 'physics', 'hair', 'debt', 'divorce', 'orange', 'honey', 'tit', 'pestilence','nut'],
+        numbers: [Math.floor(Math.random() * 201)],
+        verbs: ['bend', 'grab', 'compensate', 'paint', 'sack', 'fuck', 'slap', 'trap', 'measure',
+        'launch', 'punt', 'knit', 'explore', 'mind', 'mutter', 'spit', 'murder', 'obliterate', 'take',
+        'dig', 'break', 'bow', 'satisfy', 'complain', 'reproduce', 'characterize', 'resist', 'fix','neuter',
+        'transmit', 'resign', 'mutilitate', 'cancel', 'kiss', 'inspect', 'attach', 'provoke', 'build'],
+        adjectives: ['miscreant', 'young', 'burly', 'drunk', 'colossal', 'whorish', 'unlimited', 'acoustic',
+        'free', 'zesty', 'sexy', 'drab', 'stupid', 'special', 'sorry', 'mindless', 'childish', 'scrawny',
+        'shredded', 'wiggly', 'tiny', 'ceaseless', 'electronic', 'sus', 'emasculating', 'obedient', 'third',
+        'high', 'grouchy', 'oceanic', 'naked', 'serious', 'salty','magenta', 'sleepy', 'rhetorical', 'tight' ],
+        celebrities: ['Vin Diesel', 'Floyd Mayweather, Jr.', 'Michael Cera', 'Tina Fey', 'Flava Flav', 'Cesar Millan',
+        'Mel Gibson', 'George Clooney', 'Gary Oldman', 'Anna Kendrick', 'Natalie Portman', 'Don Cheadle',
+        'Chris Evans', 'Robert Downy Jr.', 'Ben Affleck', 'Ben Stiller', 'Mark Wahlberg', 'Adam Driver',
+        'Eddie Murphy', 'Michael Caine', 'Johnny Depp', 'Ben Kingsley', 'Dwayne Johnson', 'Will Smith', 
+        'Tommy Lee Jones', 'Clint Eastwood', 'Forest Whitaker', 'Sigourney Weaver', 'Denzel Washington', 
+        'Bill Murray', 'Sam L. Jackson', 'Jennifer Lawrence', 'Michelle Pfeiffer', 'Bruce Willis'],
 
     },
     //generates random date from now to the end of 2100
@@ -71,7 +86,7 @@ let messageGenerator = {
         let message = '';
         let replacementWord = '';
         let updatedElement = '';
-        
+
         //for loop searches each element of templateArr and if it does not include any of the
         //bracketed word types it concats the word to the message string
         //if it does, it check which type of word it is and picks a random 
