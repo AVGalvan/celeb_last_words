@@ -110,12 +110,14 @@ let mixedMessages = {
         //if it does, it check which type of word it is and picks a random 
         //corresponding word from the word bank
         for (let i = 0; i < templateArr.length; i++){
-            //if statement checks if current templateArr element includes bracketed word type & concats
+            //if statement first checks to see if word does not include a bracketed word type (most likely)
+            //if it does not, it concats. If it does, the else ifs check what the bracketed word type is 
+            //it then concats accordingly
             if (templateArr[i].includes('[noun]') === false && templateArr[i].includes('[number]') === false &&
             templateArr[i].includes('[verb]') === false  && templateArr[i].includes('[adjective]') === false &&
             templateArr[i].includes('[celeb]') === false){
                 message = message.concat(' ', templateArr[i]);
-
+            
             } else if (templateArr[i].includes('[noun]') === true){
                 replacementWord = this.randomWordFromBank('n');
                 updatedElement = templateArr[i].replace('[noun]', replacementWord);
@@ -146,7 +148,7 @@ let mixedMessages = {
             };
         };
         message = message.charAt(1).toUpperCase() + message.slice(2);//capitalizes first letter
-        message += '\n-' + this.randomWordFromBank('c');//adds celebrity name
+        message += '\n-' + this.randomWordFromBank('c');//adds random celebrity name
         message += ', \n' + this.randomDateGenerator(); //adds random date 
         return message;
     }
