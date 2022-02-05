@@ -154,5 +154,5 @@ let mixedMessages = {
     }
 }
 
-console.log(messageGenerator.generateMessage());
+console.log(mixedMessages.generateMessage());
 console.log('');
