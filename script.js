@@ -1,5 +1,5 @@
 let mixedMessages = {
-    //templates upon which the messages will be built
+    //templates that will be altered by generateMessage method
     //word types: [noun], [number], [verb], [adjective], [celeb]
     templates: [
         `At [number], everyone has the [noun] he [verb]s.`,
@@ -153,3 +153,4 @@ let mixedMessages = {
 }
 
 console.log(messageGenerator.generateMessage());
+console.log('');
