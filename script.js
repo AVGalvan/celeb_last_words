@@ -154,11 +154,7 @@ let mixedMessages = {
     }
 }
 
-console.log(mixedMessages.generateMessage());
-console.log('');
-console.log(mixedMessages.generateMessage());
-console.log('');
-console.log(mixedMessages.generateMessage());
-console.log('');
-console.log(mixedMessages.generateMessage());
-console.log('');
+for (let i = 0; i < 3; i++){
+    console.log(mixedMessages.generateMessage());
+    console.log('');
+};
